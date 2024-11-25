@@ -65,4 +65,4 @@ if __name__ == '__main__':
                      menu_visible=True, frame_visible=True)
 
     # Publish
-    # publish()
+    publish()

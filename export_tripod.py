@@ -11,13 +11,13 @@ from scene_tripod.scene import Simulation
 def publish():
 
     # Github
-    subprocess.run(['git', 'add', 'html/logo.html'])
+    subprocess.run(['git', 'add', 'html/tripod.html'])
     subprocess.run(['git', 'commit', '-m', 'Update html.'])
     subprocess.run(['git', 'push'])
 
     # Generate url
     com = subprocess.check_output(['git', 'rev-parse', 'HEAD']).decode('utf-8')[:-1]
-    url = f'https://htmlpreview.github.io/?https://github.com/RobinEnjalbert/SofaWeek2024/blob/{com}/html/logo.html'
+    url = f'https://htmlpreview.github.io/?https://github.com/RobinEnjalbert/SofaWeek2024/blob/{com}/html/tripod.html'
     webbrowser.open(url)
 
     # Generate qr-code
@@ -57,4 +57,4 @@ if __name__ == '__main__':
                      menu_visible=True, frame_visible=True)
 
     # Publish
-    # publish()
+    publish()
